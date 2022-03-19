@@ -32,7 +32,7 @@ jobs:
         MIHOYOBBS_COOKIES: ${{secrets.MIHOYOBBS_COOKIES}}
         MIHOYOBBS_BBS_GLOBAL: true
     - name: Save credential
-      uses: hmanzur/actions-set-secret@v2.0.0
+      uses: shellci/actions-set-secret@v2.0.0
       if: ${{ failure() || steps.checkin.outputs.MIHOYOBBS_CREDENTIAL }}
       with:
         name: 'MIHOYOBBS_CREDENTIAL'
