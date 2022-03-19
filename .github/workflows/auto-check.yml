@@ -30,7 +30,7 @@ jobs:
       env:
         MIHOYOBBS_CREDENTIAL: ${{secrets.MIHOYOBBS_CREDENTIAL}}
         MIHOYOBBS_COOKIES: ${{secrets.MIHOYOBBS_COOKIES}}
-        # MIHOYOBBS_BBS_GLOBAL: true
+        MIHOYOBBS_BBS_GLOBAL: true
     - name: Save credential
       uses: hmanzur/actions-set-secret@v2.0.0
       if: ${{ failure() || steps.checkin.outputs.MIHOYOBBS_CREDENTIAL }}
